@@ -1,0 +1,110 @@
+// COLORS 
+$primary-color: #FEFBE7;
+$secondary-color: #F9EBC8;
+$tertiary-color: #DAE5D0;
+
+// Dark mode colors
+$primary-dark-color: #132C33;
+$secondary-dark-color: #126E82;
+$tertiary-dark-color: #51C4D3;
+
+// TEXT STYLES
+$font-family: "Glory", sans-serif;
+
+// DISPLAY TEXT STYLES
+@mixin display-large {
+  line-height: 64px;
+  font-size: 57px;
+  font-family: $font-family;
+}
+
+@mixin display-medium {
+  line-height: 52px;
+  font-size: 45px;
+  font-family: $font-family;
+}
+
+@mixin display-small {
+  line-height: 44px;
+  font-size: 36px;
+  font-family: $font-family;
+}
+
+// HEADLINES TEXT STYLES
+@mixin headlines-large {
+  line-height: 40px;
+  font-size: 32px;
+  font-family: $font-family;
+  text-transform: uppercase;
+}
+
+@mixin headlines-medium {
+  line-height: 36px;
+  font-size: 28px;
+  font-family: $font-family;
+  text-transform: uppercase;
+}
+
+@mixin headlines-small {
+  line-height: 32px;
+  font-size: 24px;
+  font-family: $font-family;
+  text-transform: uppercase;
+}
+
+// TITLE TEXT STYLES
+@mixin title-large {
+  line-height: 28px;
+  font-size: 22px;
+  font-family: $font-family;
+}
+
+@mixin title-medium {
+  line-height: 24px;
+  font-size: 16px;
+  font-family: $font-family;
+}
+
+@mixin title-small {
+  line-height: 20px;
+  font-size: 16px;
+  font-family: $font-family;
+}
+
+// LABEL TEXT STYLES
+@mixin label-large {
+  line-height: 20px;
+  font-size: 14px;
+  font-family: $font-family;
+}
+
+@mixin label-medium {
+  line-height: 16px;
+  font-size: 12px;
+  font-family: $font-family;
+}
+
+@mixin label-small {
+  line-height: 16px;
+  font-size: 11px;
+  font-family: $font-family;
+}
+
+// BODY TEXT STYLES
+@mixin body-large {
+  line-height: 24px;
+  font-size: 16px;
+  font-family: $font-family;
+}
+
+@mixin body-medium {
+  line-height: 20px;
+  font-size: 14px;
+  font-family: $font-family;
+}
+
+@mixin body-small {
+  line-height: 16px;
+  font-size: 12px;
+  font-family: $font-family;
+}
