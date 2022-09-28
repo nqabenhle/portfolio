@@ -1,0 +1,121 @@
+// || TOGGLE DARK/LIGHT MODE
+@-o-keyframes toggle-ball-right {
+  from {
+    left: 10px;
+  }
+
+  to {
+    left: 50px;
+  }
+}
+
+@-moz-keyframes toggle-ball-right {
+  from {
+    left: 10px;
+  }
+
+  to {
+    left: 50px;
+  }
+}
+
+@-webkit-keyframes toggle-ball-right {
+  from {
+    left: 10px;
+  }
+
+  to {
+    left: 50px;
+  }
+}
+
+@keyframes toggle-ball-right {
+  from {
+    left: 10px;
+  }
+
+  to {
+    left: 50px;
+  }
+}
+
+@-o-keyframes toggle-ball-left {
+  from {
+    left: 50px;
+  }
+
+  to {
+    left: 10px;
+  }
+}
+
+@-moz-keyframes toggle-ball-left {
+  from {
+    left: 50px;
+  }
+
+  to {
+    left: 10px;
+  }
+}
+
+@-webkit-keyframes toggle-ball-left {
+  from {
+    left: 50px;
+  }
+
+  to {
+    left: 10px;
+  }
+}
+
+@keyframes toggle-ball-left {
+  from {
+    left: 50px;
+  }
+
+  to {
+    left: 10px;
+  }
+}
+
+// || OFF-CANVAS
+@-o-keyframes menubar {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes menubar {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes menubar {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes menubar {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

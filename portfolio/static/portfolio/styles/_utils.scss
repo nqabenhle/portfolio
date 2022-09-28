@@ -1,0 +1,36 @@
+.underline {
+  text-decoration: underline;
+}
+
+.c-tooltip {
+  position: relative;
+}
+
+.c-tooltip::before,
+.c-tooltip::after {
+  position: absolute;
+  top: -.25rem;
+  left: 50%;
+  transform: translateX(-50%) translateY(-100%) scale(0);
+  transition: 50ms transform;
+  transform-origin: bottom center;
+}
+
+.c-tooltip:before {
+  content: attr(data-tooltip);
+  padding: .5rem;
+  width: max-content;
+  border-radius: .3rem;
+  text-align: center;
+  background-color: #000;
+  color: #fff;
+}
+
+.c-tooltip:hover {
+  cursor: pointer;
+}
+
+.c-tooltip:hover::before,
+.c-tooltip:hover::after {
+  transform: translateX(-50%) translateY(-100%) scale(1);
+}

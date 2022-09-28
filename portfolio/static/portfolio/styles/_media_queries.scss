@@ -1,0 +1,12 @@
+// || NAVIGATION BAR
+@media only screen and (min-width: 992px) {
+  header {
+    #hamburger-menu {
+      display: none;
+    }
+
+    #menu-links {
+      display: flex;
+    }
+  }
+}
