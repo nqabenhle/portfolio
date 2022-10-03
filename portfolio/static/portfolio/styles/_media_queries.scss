@@ -1,3 +1,10 @@
+// || SHARED STYLES 
+@media only screen and (min-width: 992px) {
+  .card {
+    margin: 0;
+  }
+}
+
 // || NAVIGATION BAR
 @media only screen and (min-width: 992px) {
   header {
@@ -7,6 +14,64 @@
 
     #menu-links {
       display: flex;
+    }
+  }
+}
+
+// || TYPOGRAPHY
+@media only screen and (min-width: 600px) {
+  .header {
+    @include title-medium;
+  }
+
+  .content {
+    @include body-medium;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .header {
+    @include title-large;
+  }
+
+  .content {
+    @include body-large;
+  }
+}
+
+// || HOME
+@media only screen and (max-width: 767px) {
+  .certificate {
+    margin-bottom: 16px;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  #hero {
+    @include title-large;
+
+    p {
+      margin-top: 16px;
+    }
+
+    .title {
+      @include display-medium;
+      text-transform: uppercase;
+    }
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  #hero {
+    @include display-small;
+
+    p {
+      margin-top: 16px;
+    }
+
+    .title {
+      @include display-large;
+      text-transform: uppercase;
     }
   }
 }

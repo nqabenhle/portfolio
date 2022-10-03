@@ -1,19 +1,7 @@
 @import "styles/design_systems";
+@import "styles/animations";
 @import "styles/utils";
+@import "styles/shared";
 @import "styles/layout";
+@import "styles/home";
 @import "styles/media_queries";
-
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-}
-
-a,
-a:hover,
-a:active {
-  text-decoration: none;
-  color: inherit;
-}

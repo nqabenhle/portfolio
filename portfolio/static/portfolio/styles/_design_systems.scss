@@ -66,12 +66,14 @@ $font-family: "Glory", sans-serif;
 @mixin title-medium {
   line-height: 24px;
   font-size: 16px;
+  font-weight: 500;
   font-family: $font-family;
 }
 
 @mixin title-small {
   line-height: 20px;
   font-size: 16px;
+  font-weight: 500;
   font-family: $font-family;
 }
 
@@ -91,6 +93,7 @@ $font-family: "Glory", sans-serif;
 @mixin label-small {
   line-height: 16px;
   font-size: 11px;
+  font-weight: 500;
   font-family: $font-family;
 }
 
@@ -111,4 +114,15 @@ $font-family: "Glory", sans-serif;
   line-height: 16px;
   font-size: 12px;
   font-family: $font-family;
+}
+
+// COMMON STYLES
+$section-padding: 25px 0;
+$border-radius: 20px;
+
+// || IMAGES
+@mixin images($width: 100%, $height: auto, $b-radius: $border-radius) {
+  width: $width;
+  height: $height;
+  border-radius: $b-radius;
 }

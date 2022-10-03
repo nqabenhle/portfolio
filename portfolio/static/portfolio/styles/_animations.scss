@@ -119,3 +119,144 @@
     opacity: 1;
   }
 }
+
+// || SKELETON LOADING
+@keyframes skeleton-loading {
+  0% {
+    background-color: rgb(163, 184, 194);
+  }
+
+  100% {
+    background-color: rgb(240, 243, 245);
+  }
+}
+
+/* Opera */
+@-o-keyframes skeleton-loading {
+  0% {
+    background-color: rgb(163, 184, 194);
+  }
+
+  100% {
+    background-color: rgb(240, 243, 245);
+  }
+}
+
+/* Firefox */
+@-moz-keyframes skeleton-loading {
+  0% {
+    background-color: rgb(163, 184, 194);
+  }
+
+  100% {
+    background-color: rgb(240, 243, 245);
+  }
+}
+
+/* Chrome, Safari */
+@-webkit-keyframes skeleton-loading {
+  0% {
+    background-color: rgb(163, 184, 194);
+  }
+
+  100% {
+    background-color: rgb(240, 243, 245);
+  }
+}
+
+// || BUTTON HOVER ANIMATION
+@-o-keyframes ani {
+  from {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+  }
+
+  to {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+}
+
+@-moz-keyframes ani {
+  from {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+  }
+
+  to {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+}
+
+@-webkit-keyframes ani {
+  from {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+  }
+
+  to {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+}
+
+@keyframes ani {
+  from {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+  }
+
+  to {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+}
+
+@-o-keyframes ani2 {
+  from {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+
+  to {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+  }
+}
+
+@-moz-keyframes ani2 {
+  from {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+
+  to {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+  }
+}
+
+@-webkit-keyframes ani2 {
+  from {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+
+  to {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+  }
+}
+
+@keyframes ani2 {
+  from {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+
+  to {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+  }
+}

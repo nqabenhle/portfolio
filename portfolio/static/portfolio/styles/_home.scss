@@ -1,0 +1,29 @@
+#hero {
+    @include title-large;
+
+    p {
+        margin-top: 16px;
+    }
+
+    .title {
+        @include display-small;
+        text-transform: uppercase;
+    }
+}
+
+#skills {
+    color: $text-dark-color;
+}
+
+#hire {
+    .button-container {
+        margin: auto;
+    }
+}
+
+#book {
+    .title {
+        text-decoration: underline;
+        margin-top: 10px;
+    }
+}

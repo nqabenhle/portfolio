@@ -1,0 +1,223 @@
+{% extends "portfolio/layout.html" %}
+{% load static %}
+
+{% block title %} Home {% endblock %}
+
+{% block script %} {% static 'portfolio/home.js' %} {% endblock %}
+
+{% block body %}
+
+<section id="hero">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-4 col-sm-4">
+                <img class="skeleton" src="https://ik.imagekit.io/2ajtfwyor/Portfolio/IMG-20220526-WA0037_xQcVMRSQa.jpg" alt="Profile Immage of Nqabenhle Mlaba (Author)">
+            </div>
+            <div class="col-sm-12 col-md-8 col-sm-8 align-middle">
+                <div class="text-center">
+                    Hi, my name is Nqabenhle Mlaba. I am <span id="article">an</span></p>
+                    <div class="title" id="expertise">Author</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="about">
+    <div class="container">
+        <div class="header">About Me</div>
+        <div class="content">
+            I am a hard-working and dedicated student from South Africa. I study Economics but I take Computer Science courses online and teach myself programming for every second I get. I started learning how to program by the end of February 2022. I began with the CS50's Introduction to Computer Science course. In the past few months, I have learned computational thinking, abstraction, data structures, algorithms, web development, and how to be a better programmer.
+            I focus on both front-end and back-end development. I can create responsive, mobile-friendly, and high-quality websites using HTML, CSS (Sass), JavaScript, and Bootstrap on the front end. On the back end, I use Python with the Django framework.
+            <br>
+            <span class="learn-more"><a href="">Learn More</a></span>
+        </div>
+    </div>
+</section>
+
+<section id="projects">
+    <div class="container">
+        <div class="header"><p>My Projects</p></div>
+        <div class="row">
+            {% for project in projects %}
+                {% if forloop.counter == 3 %}
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <div class="card no-margin">
+                            {% include "portfolio/subtemplates/project.html" with embed=project.embed_link name=project.name about=project.about video=project.video_link %}
+                        </div>
+                    </div>
+                {% elif forloop.counter == 4 %}
+                    <div class="col-sm-12 col-md-6 col-lg-4 d-sm-none d-md-block d-lg-none">
+                        <div class="card no-margin">
+                            {% include "portfolio/subtemplates/project.html" with embed=project.embed_link name=project.name about=project.about video=project.video_link %}
+                        </div>
+                    </div>
+                {% else %}
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <div class="card">
+                            {% include "portfolio/subtemplates/project.html" with embed=project.embed_link name=project.name about=project.about video=project.video_link %}
+                        </div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<section id="skills">
+    <div class="container">
+        <div class="header"><p>My Skills</p></div>
+        <div class="slider">
+            <div class="slide-track">
+                <div class="slide">
+                    HTML
+                </div>
+                <div class="slide">
+                    CSS
+                </div>
+                <div class="slide">
+                    JavaScript
+                </div>
+                <div class="slide">
+                    Python
+                </div>
+                <div class="slide">
+                    Flask
+                </div>
+                <div class="slide">
+                    Bootstrap
+                </div>
+                <div class="slide">
+                    Sass
+                </div>
+                <div class="slide">
+                    Git
+                </div>
+                <div class="slide">
+                    C
+                </div>
+                <div class="slide">
+                    Django
+                </div>
+                <div class="slide">
+                    CI/CD
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="blogs">
+    <div class="container">
+        <div class="header">
+            <p>My Blogs</p>
+        </div>
+        <div class="try-flex">
+            <div class="row">
+                {% for blog in blogs %}
+                    {% if forloop.counter == 3 %}
+                        <div class="col-sm-12 col-md-6 col-lg-4">
+                            <div class="card no-margin">
+                                {% include "portfolio/subtemplates/blog.html" with picture=blog.picture_link name=blog.name about=blog.about blog=blog.blog_link %}
+                            </div>
+                        </div>
+                    {% elif forloop.counter == 4 %}
+                        <div class="col-sm-12 col-md-6 col-lg-4 d-sm-none d-md-block d-lg-none">
+                            <div class="card no-margin">
+                                {% include "portfolio/subtemplates/blog.html" with picture=blog.picture_link name=blog.name about=blog.about blog=blog.blog_link %}
+                            </div>
+                        </div>
+                    {% else %}
+                        <div class="col-sm-12 col-md-6 col-lg-4">
+                            <div class="card">
+                                {% include "portfolio/subtemplates/blog.html" with picture=blog.picture_link name=blog.name about=blog.about blog=blog.blog_link %}
+                            </div>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="certificates">
+    <div class="container">
+        <div class="header"><p>Certificates</p></div>
+        <div class="row">
+            {% for certificate in certificates %}
+                {% if forloop.counter == 3 %}
+                    <div class="col-sm-12 col-md-4">
+                        <img src="{{ certificate.picture_link }}" alt="{{ certificate.name }}">
+                    </div>
+                {% else %}
+                    <div class="certificate col-sm-12 col-md-4">
+                        <img src="{{ certificate.picture_link }}" alt="{{ certificate.name }}">
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<section id="hire">
+    <div class="container">
+        <div class="button-container text-center">
+            <span class="mas">Hire Me</span>
+            <button type="button" name="Hover">Hire Me</button>
+        </div>
+    </div>
+</section>
+
+<section id="questions">
+    <div class="container">
+        <div class="header"><p>Ask Me A Question</p></div>
+        <div class="row">
+            <div class="col-sm-12 col-md-6 col-sm-6">
+                <div class="mb-3">
+                    <img src="https://ik.imagekit.io/2ajtfwyor/tr:w-700/Portfolio/IMG-20220621-WA0021_FlfkMMBCvz.jpg" alt="Nqabenhle Mlaba Picture">
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-sm-6">
+                <form>
+                    {% csrf_token %}
+                    <div class="mb-3">
+                        <input class="form-control" id="name" placeholder="Name and Surname (Optional)">
+                    </div>
+                    <div class="mb-3">
+                        <textarea class="form-control" id="question" placeholder="Ask Away" rows="6" required></textarea>
+                    </div>
+                    <div class="text-start">
+                        <div class="button-container">
+                            <span class="mas">Submit</span>
+                            <button id="question-submit-btn" type="button" name="Hover">Submit</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="book">
+    <div class="container">
+        <div class="header">
+            <p>My Book</p>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-md-4 col-sm-4">
+                <img src="{{ book.book_cover }}" alt="Book Cover">
+            </div>
+            <div class="col-sm-12 col-md-8 col-sm-8">
+                <div class="content">
+                    <div class="title">
+                        <a href="{{ book.link }}" target="_blank">{{ book.title }}</a>
+                    </div>
+                    {{ book.about }}
+                    <br><span class="learn-more"><a href="{{ book.link }}" target="_blank">Learn More</a></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
