@@ -18,3 +18,6 @@ def add_question(request):
     data = json.loads(request.body)
     QAndA.objects.create(name=data.get("name"), question=data.get("question"))
     return JsonResponse({"message": "success"}, status=200)
+
+def about(request):
+    return render(request, "portfolio/about.html")
