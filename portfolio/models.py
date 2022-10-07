@@ -7,6 +7,7 @@ class Project(models.Model):
     embed_link = models.CharField(max_length=200)
     video_link = models.CharField(max_length=200)
     github_repo = models.CharField(max_length=500)
+    languages = models.JSONField()
 
     def __str__(self):
         return self.name

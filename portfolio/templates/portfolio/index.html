@@ -43,19 +43,19 @@
                 {% if forloop.counter == 3 %}
                     <div class="col-sm-12 col-md-6 col-lg-4">
                         <div class="card no-margin">
-                            {% include "portfolio/subtemplates/project.html" with embed=project.embed_link name=project.name about=project.about video=project.video_link %}
+                            {% include "portfolio/subtemplates/project.html" with embed=project.embed_link name=project.name about=project.about github_repo=project.github_repo %}
                         </div>
                     </div>
                 {% elif forloop.counter == 4 %}
                     <div class="col-sm-12 col-md-6 col-lg-4 d-sm-none d-md-block d-lg-none">
                         <div class="card no-margin">
-                            {% include "portfolio/subtemplates/project.html" with embed=project.embed_link name=project.name about=project.about video=project.video_link %}
+                            {% include "portfolio/subtemplates/project.html" with embed=project.embed_link name=project.name about=project.about github_repo=project.github_repo %}
                         </div>
                     </div>
                 {% else %}
                     <div class="col-sm-12 col-md-6 col-lg-4">
                         <div class="card">
-                            {% include "portfolio/subtemplates/project.html" with embed=project.embed_link name=project.name about=project.about video=project.video_link %}
+                            {% include "portfolio/subtemplates/project.html" with embed=project.embed_link name=project.name about=project.about github_repo=project.github_repo %}
                         </div>
                     </div>
                 {% endif %}

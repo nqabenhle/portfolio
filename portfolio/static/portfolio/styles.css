@@ -472,6 +472,19 @@ footer {
   border-radius: 50%;
   margin-bottom: 16px; }
 
+#projects {
+  padding-bottom: calc(25px 0 - 16px); }
+  #projects .card {
+    height: 650px !important;
+    margin-bottom: 16px; }
+    #projects .card .stack-header {
+      font-weight: 700;
+      margin: 16px 0 6px 0; }
+    #projects .card .stack {
+      background-color: #132C33;
+      border-radius: 20px;
+      height: 5px; }
+
 @media only screen and (min-width: 992px) {
   .card {
     margin: 0; } }
