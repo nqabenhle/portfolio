@@ -26,3 +26,8 @@ def projects(request):
     return render(request, "portfolio/projects.html", {
         "projects": Project.objects.all()
     })
+
+def blogs(request):
+    return render(request, "portfolio/blogs.html", {
+        "blogs": Blog.objects.all()
+    })
