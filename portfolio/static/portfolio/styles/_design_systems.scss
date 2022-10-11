@@ -117,7 +117,8 @@ $font-family: "Glory", sans-serif;
 }
 
 // COMMON STYLES
-$section-padding: 25px 0;
+$padding: 25px;
+$section-padding: $padding 0;
 $border-radius: 20px;
 
 // || IMAGES

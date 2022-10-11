@@ -69,39 +69,11 @@
         <div class="header"><p>My Skills</p></div>
         <div class="slider">
             <div class="slide-track">
-                <div class="slide">
-                    HTML
-                </div>
-                <div class="slide">
-                    CSS
-                </div>
-                <div class="slide">
-                    JavaScript
-                </div>
-                <div class="slide">
-                    Python
-                </div>
-                <div class="slide">
-                    Flask
-                </div>
-                <div class="slide">
-                    Bootstrap
-                </div>
-                <div class="slide">
-                    Sass
-                </div>
-                <div class="slide">
-                    Git
-                </div>
-                <div class="slide">
-                    C
-                </div>
-                <div class="slide">
-                    Django
-                </div>
-                <div class="slide">
-                    CI/CD
-                </div>
+                {% for skill in skills %}
+                    <div class="slide">
+                        {{ skill }}
+                    </div>
+                {% endfor %}
             </div>
         </div>
     </div>

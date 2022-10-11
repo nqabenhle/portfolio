@@ -9,5 +9,6 @@ urlpatterns = [
     path("question/add", views.add_question, name="question"),
     path("about", views.about, name="about"),
     path("projects", views.projects, name="projects"),
-    path("blogs", views.blogs, name="blogs")
+    path("blogs", views.blogs, name="blogs"),
+    path("certificates", views.certificates, name="certificates")
 ]

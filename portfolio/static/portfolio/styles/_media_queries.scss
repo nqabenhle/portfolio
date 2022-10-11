@@ -1,7 +1,16 @@
 // || SHARED STYLES 
+@media only screen and (min-width: 600x) {
+  .btn {
+    @include label-medium;
+  }
+}
 @media only screen and (min-width: 992px) {
   .card {
     margin: 0;
+  }
+
+  .btn {
+    @include label-large;
   }
 }
 

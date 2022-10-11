@@ -8,6 +8,7 @@ from .models import *
 
 def index(request):
     return render(request, "portfolio/index.html", {
+        "skills": Skill.objects.all(),
         "projects": Project.objects.all()[:4],
         "blogs": Blog.objects.all()[:4],
         "certificates": Certificate.objects.all()[:3],
@@ -30,4 +31,9 @@ def projects(request):
 def blogs(request):
     return render(request, "portfolio/blogs.html", {
         "blogs": Blog.objects.all()
+    })
+
+def certificates(request):
+    return render(request, "portfolio/certificates.html", {
+        "certificates": Certificate.objects.all()
     })

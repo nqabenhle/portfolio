@@ -1,3 +1,25 @@
-{% extends "portfolio/certificates" %}
+{% extends "portfolio/layout.html" %}
 
 {% block title %} Certificates {% endblock %}
+
+{% block body %}
+
+<section id="certificates-page">
+    <div class="container">
+        <p class="header">Certificates</p>
+        <div class="row">
+            {% for certificate in certificates %}
+                <div class="col-sm-12 col-md-4">
+                    <div class="validate">
+                        <img src="{{ certificate.picture_link }}" alt="{{ certificate.name }}">
+                        <div class="validation-wrapper text-center">
+                            <div class="btn"><a href="{{ certificate.validation }}" target="_blank">Validate</a></div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+{% endblock %}

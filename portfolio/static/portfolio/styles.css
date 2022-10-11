@@ -473,7 +473,7 @@ footer {
   margin-bottom: 16px; }
 
 #projects {
-  padding-bottom: calc(25px 0 - 16px); }
+  padding-bottom: calc(25px - 16px); }
   #projects .card {
     height: 650px !important;
     margin-bottom: 16px; }
@@ -490,9 +490,47 @@ footer {
   #blogs .card {
     margin-bottom: 16px; }
 
+#certificates-page {
+  padding-bottom: calc(25px - 16px); }
+  #certificates-page .validate {
+    margin-bottom: 16px;
+    position: relative; }
+    #certificates-page .validate .validation-wrapper {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0; }
+      #certificates-page .validate .validation-wrapper:hover {
+        opacity: 1;
+        cursor: pointer; }
+      #certificates-page .validate .validation-wrapper .btn {
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%); }
+        #certificates-page .validate .validation-wrapper .btn:hover {
+          background-color: #DAE5D0; }
+    #certificates-page .validate img {
+      transition: .5s ease;
+      backface-visibility: hidden; }
+      #certificates-page .validate img:hover {
+        opacity: .3; }
+
+@media only screen and (min-width: 600x) {
+  .btn {
+    line-height: 16px;
+    font-size: 12px;
+    font-family: "Glory", sans-serif; } }
 @media only screen and (min-width: 992px) {
   .card {
-    margin: 0; } }
+    margin: 0; }
+
+  .btn {
+    line-height: 20px;
+    font-size: 14px;
+    font-family: "Glory", sans-serif; } }
 @media only screen and (min-width: 992px) {
   header #hamburger-menu {
     display: none; }
