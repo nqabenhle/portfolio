@@ -518,6 +518,25 @@ footer {
       #certificates-page .validate img:hover {
         opacity: .3; }
 
+#skills-page {
+  padding-bottom: calc(25px - 16px); }
+  #skills-page .card-wrapper {
+    margin-bottom: 16px; }
+    #skills-page .card-wrapper .card-small {
+      position: relative;
+      background-color: #F9EBC8;
+      border-radius: 20px;
+      padding: 20px;
+      height: 100%; }
+      #skills-page .card-wrapper .card-small .header {
+        margin-bottom: 8px; }
+      #skills-page .card-wrapper .card-small .content {
+        margin-bottom: 40px; }
+      #skills-page .card-wrapper .card-small .learn-more {
+        position: absolute;
+        bottom: 20px;
+        right: 20px; }
+
 @media only screen and (min-width: 600x) {
   .btn {
     line-height: 16px;

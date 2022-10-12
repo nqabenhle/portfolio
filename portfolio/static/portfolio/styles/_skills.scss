@@ -1,0 +1,29 @@
+#skills-page {
+  padding-bottom: calc(#{$padding} - 16px);
+
+  .card-wrapper {
+    margin-bottom: 16px;
+    
+    .card-small {
+      position: relative;
+      background-color: $secondary-color;
+      border-radius: $border-radius;
+      padding: 20px;
+      height: 100%;
+  
+      .header {
+        margin-bottom: 8px;
+      }
+
+      .content {
+        margin-bottom: 40px;
+      }
+  
+      .learn-more {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+      }
+    }
+  }
+}

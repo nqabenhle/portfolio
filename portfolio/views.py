@@ -37,3 +37,8 @@ def certificates(request):
     return render(request, "portfolio/certificates.html", {
         "certificates": Certificate.objects.all()
     })
+
+def skills(request):
+    return render(request, "portfolio/skills.html", {
+        "skills": Skill.objects.all()
+    })
