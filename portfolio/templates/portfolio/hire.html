@@ -1,0 +1,34 @@
+{% extends "portfolio/layout.html" %}
+
+{% block title %} Hire Me {% endblock %}
+
+{% block body %}
+
+<section id="hire-page">
+    <div class="container">
+        <p class="header">Hire Me</p>
+        <div class="row">
+            <div class="col-sm-12-col-md-4 col-lg-4">
+                <img class="skeleton" src="https://ik.imagekit.io/2ajtfwyor/tr:w-750/Portfolio/IMG-20220526-WA0043_qeZNL0LFj-.jpg" alt="Nqabenhle working" loading="lazy">
+            </div>
+            <div class="col-sm-12-col-md-8 col-lg-8">
+                <div>
+                    <form action="">
+                        {% csrf_token %}
+                        {% for field in form %}
+                            <div class="mb-3">
+                                {{ field }}
+                            </div>
+                        {% endfor %}
+                        <div class="button-container text-center">
+                            <span class="mas">Send</span>
+                            <button type="button" name="Hover">Send</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

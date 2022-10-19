@@ -1,6 +1,7 @@
 import json
 from django.shortcuts import render
 from django.http import HttpResponse, JsonResponse
+from django import forms
 
 from .models import *
 
@@ -41,4 +42,16 @@ def certificates(request):
 def skills(request):
     return render(request, "portfolio/skills.html", {
         "skills": Skill.objects.all()
+    })
+
+class HireForm(forms.Form):
+    name = forms.CharField(widget=forms.TextInput(attrs={"class":"form-control", "placeholder":"Full Names"}))
+    email = forms.CharField(widget=forms.TextInput(attrs={"class":"form-control", "placeholder":"Email"}))
+    offer = forms.CharField(widget=forms.TextInput(attrs={"class":"form-control", "placeholder":"Job Offer"}))
+    message = forms.CharField(widget=forms.Textarea(attrs={"class":"form-control", "placeholder":"Job Description"}))
+    
+
+def hire(request):
+    return render(request, "portfolio/hire.html", {
+        "form": HireForm()
     })
