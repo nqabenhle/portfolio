@@ -2,13 +2,17 @@
 
 {% block title %} Hire Me {% endblock %}
 
+{% block hire %}
+<a href="{% url 'portfolio:hire' %}" id="hire" class="active">Hire Me</a>
+{% endblock %}
+
 {% block body %}
 
 <section id="hire-page">
     <div class="container">
         <p class="header">Hire Me</p>
         <div class="row">
-            <div class="col-sm-12-col-md-4 col-lg-4">
+            <div class="col-sm-12-col-md-4 col-lg-4 view-hidden-left">
                 <img class="skeleton" src="https://ik.imagekit.io/2ajtfwyor/tr:w-750/Portfolio/IMG-20220526-WA0043_qeZNL0LFj-.jpg" alt="Nqabenhle working" loading="lazy">
             </div>
             <div class="col-sm-12-col-md-8 col-lg-8">

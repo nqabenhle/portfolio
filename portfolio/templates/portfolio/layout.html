@@ -18,7 +18,6 @@
 </head>
 
 <body>
-
     <header>
         <div id="toggle-modes">
             <i class="bi bi-brightness-high-fill"></i>
@@ -28,20 +27,20 @@
         <i id="hamburger-menu" class="bi bi-list"></i>
         <i id="x-menu" class="bi bi-x-lg"></i>
         <div id="menu-links">
-            <a href="" id="home" class="active">Home</a>
-            <a href="" id="about">About</a>
-            <a href="" id="projects">Projects</a>
-            <a href="" id="skills">Skills</a>
-            <a href="" id="contacts">Contacts</a>
+            {% block index %}<a href="{% url 'portfolio:index' %}" id="home">Home</a>{% endblock %}
+            {% block about %}<a href="{% url 'portfolio:about' %}" id="about">About</a>{% endblock %}
+            {% block projects %}<a href="{% url 'portfolio:projects' %}" id="projects">Projects</a>{% endblock %}
+            {% block skills %}<a href="{% url 'portfolio:skills' %}" id="skills">Skills</a>{% endblock %}
+            {% block hire %}<a href="{% url 'portfolio:hire' %}" id="hire">Hire Me</a>{% endblock %}
         </div>
     </header>
 
     <div id="off-canvas">
-        <div><a href=""></a>Home</div>
-        <div><a href=""></a>About</div>
-        <div><a href=""></a>Projects</div>
-        <div><a href=""></a>Skills</div>
-        <div><a href=""></a>Contacts</div>
+        <div><a href="{% url 'portfolio:index' %}"></a>Home</div>
+        <div><a href="{% url 'portfolio:about' %}"></a>About</div>
+        <div><a href="{% url 'portfolio:projects' %}"></a>Projects</div>
+        <div><a href="{% url 'portfolio:skills' %}"></a>Skills</div>
+        <div><a href="{% url 'portfolio:hire' %}"></a>Contacts</div>
     </div>
 
     <main>
@@ -69,17 +68,33 @@
                     <div><a href="https://www.youtube.com/channel/UCJxQhYuwavXInmXK2H0lMyA" target="_blank"><i
                                 class="bi bi-youtube"></i></a></div>
                 </div>
-                <div class="underline"><a href=""></a>Hire</div>
-                <div class="underline"><a href=""></a>Contacts</div>
-                <div class="underline"><a href=""></a>Skills</div>
-                <div class="underline"><a href=""></a>Projects</div>
-                <div class="underline"><a href=""></a>Certificates</div>
-                <div class="underline"><a href=""></a>Blogs</div>
-                <div class="underline"><a href=""></a>About</div>
+                <div class="underline"><a href="{% url 'portfolio:hire' %}">Hire</a></div>
+                <div class="underline"><a href="{% url 'portfolio:skills' %}">Skills</a></div>
+                <div class="underline"><a href="{% url 'portfolio:projects' %}">Projects</a></div>
+                <div class="underline"><a href="{% url 'portfolio:certificates' %}">Certificates</a></div>
+                <div class="underline"><a href="{% url 'portfolio:blogs' %}">Blogs</a></div>
+                <div class="underline"><a href="{% url 'portfolio:about' %}">About</a></div>
             </div>
             <div id="copyright">&#169; qcodes.site</div>
         </div>
     </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("show");
+                }
+            });
+        });
+
+        const hiddenElementsLeft = document.querySelectorAll(".view-hidden-left");
+        const hiddenElementsRight = document.querySelectorAll(".view-hidden-right");
+        const hiddenElementsMiddle = document.querySelectorAll(".view-hidden-middle");
+        hiddenElementsLeft.forEach((el) => observer.observe(el));
+        hiddenElementsRight.forEach((el) => observer.observe(el));
+        hiddenElementsMiddle.forEach((el) => observer.observe(el));
+    </script>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
         integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"

@@ -2,13 +2,17 @@
 
 {% block title %} Projects {% endblock %}
 
+{% block projects %}
+<a href="{% url 'portfolio:projects' %}" id="projects" class="active">Projects</a>
+{% endblock %}
+
 {% block body %}
 <section id="projects">
     <div class="container">
         <p><div class="header">Projects</div></p>
         <div class="row">
             {% for project in projects %}
-                <div class="col-sm-12 col-md-6 col-lg-4">
+                <div class="col-sm-12 col-md-6 col-lg-4 view-hidden-middle">
                     <div class="card">
                         <div class="show">
                             <iframe class="skeleton" width="100%" height="210px" src="{{ project.embed_link }}" 
