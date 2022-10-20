@@ -47,7 +47,7 @@
 
 // || TEXT CAROUSEL
 @mixin white-gradient {
-  background: linear-gradient(to right, rgba(249, 235, 200, 1) 0%, rgba(249, 235, 200, 0) 100%);
+  background: linear-gradient(to right, var(--secondary-color) 0%, rgba(249, 235, 200, 0) 100%);
 }
 
 $animationSpeed: 40s;
@@ -68,7 +68,7 @@ $animationSpeed: 40s;
 .slider {
   padding: 10px 0;
   border-radius: calc(#{$border-radius} - 10px);
-  background-color: $secondary-color;
+  background-color: var(--secondary-color);
   // box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
   height: 100%;
   margin: auto;
@@ -129,7 +129,7 @@ $animationSpeed: 40s;
   width: 100px;
   height: 50px;
   overflow: hidden;
-  border: 1px solid $secondary-color;
+  border: 1px solid var(--secondary-color);
   transition: 0.5s;
   border-radius: $border-radius;
 
@@ -137,12 +137,12 @@ $animationSpeed: 40s;
     width: 101%;
     height: 100%;
 
-    @include button($secondary-color,
+    @include button(var(--secondary-color),
       "https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png",
       2300%,
       100%,
       none,
-      $text-dark-color);
+      var(--text-dark-color));
     cursor: pointer;
     -o-animation: ani2 0.7s steps(22) forwards;
     -moz-animation: ani2 0.7s steps(22) forwards;
@@ -160,7 +160,7 @@ $animationSpeed: 40s;
 
 .mas {
   position: absolute;
-  color: $text-dark-color;
+  color: var(--text-dark-color);
   text-align: center;
   width: 101%;
   position: absolute;

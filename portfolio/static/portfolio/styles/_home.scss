@@ -1,3 +1,7 @@
+body {
+  color: var(--text-dark-color);
+}
+
 #hero {
   @include title-large;
 
@@ -12,7 +16,7 @@
 }
 
 #skills {
-  color: $text-dark-color;
+  color: var(--text-dark-color);
 }
 
 #hire {

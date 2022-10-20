@@ -11,7 +11,7 @@
     }
   
     .stack {
-      background-color: $primary-dark-color;
+      background-color: var(--primary-dark-color);
       border-radius: $border-radius;
       height: 5px;
     }

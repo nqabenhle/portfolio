@@ -6,7 +6,7 @@
 {% block script %} {% static 'portfolio/home.js' %} {% endblock %}
 
 {% block index %}
-<a href="{% url 'portfolio:index' %}" id="home" class="active">Home</a>
+<a href="{% url 'portfolio:index' %}" class="active">Home</a>
 {% endblock %}
 
 {% block body %}
@@ -51,13 +51,13 @@
                         </div>
                     </div>
                 {% elif forloop.counter == 4 %}
-                    <div class="col-sm-12 col-md-6 col-lg-4 d-sm-none d-md-block d-lg-none view-hidden-left">
+                    <div class="col-sm-12 col-md-6 col-lg-4 d-none d-md-block d-lg-none view-hidden-left">
                         <div class="card no-margin">
                             {% include "portfolio/subtemplates/project.html" with embed=project.embed_link name=project.name about=project.about github_repo=project.github_repo %}
                         </div>
                     </div>
                 {% else %}
-                    <div class="col-sm-12 col-md-6 col-lg-4  view-hidden-left">
+                    <div class="col-sm-12 col-md-6 col-lg-4 view-hidden-left">
                         <div class="card">
                             {% include "portfolio/subtemplates/project.html" with embed=project.embed_link name=project.name about=project.about github_repo=project.github_repo %}
                         </div>
@@ -98,7 +98,7 @@
                             </div>
                         </div>
                     {% elif forloop.counter == 4 %}
-                        <div class="col-sm-12 col-md-6 col-lg-4 d-sm-none d-md-block d-lg-none view-hidden-left">
+                        <div class="col-sm-12 col-md-6 col-lg-4 d-none d-md-block d-lg-none view-hidden-left">
                             <div class="card no-margin">
                                 {% include "portfolio/subtemplates/blog.html" with picture=blog.picture_link name=blog.name about=blog.about blog=blog.blog_link %}
                             </div>

@@ -7,7 +7,7 @@
     
     .card-small {
       position: relative;
-      background-color: $secondary-color;
+      background-color: var(--secondary-color);
       border-radius: $border-radius;
       padding: 20px;
       height: 100%;

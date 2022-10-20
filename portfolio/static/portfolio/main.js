@@ -1,3 +1,8 @@
+if (localStorage.getItem("darkMode") === "true") {
+    document.querySelector("#toggle-ball").style.animationName = "toggle-ball-right";
+    document.body.classList.add("darkmode");
+} 
+
 document.addEventListener("DOMContentLoaded", () => {
     document.querySelector("#hamburger-menu").addEventListener("click", () => {
         document.querySelector("#hamburger-menu").style.display = "none";
@@ -16,14 +21,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
     document.querySelector(".bi-brightness-high-fill").addEventListener("click", () => {
         document.querySelector("#toggle-ball").style.animationName = "toggle-ball-left";
+        document.body.classList.remove("darkmode");
+        localStorage.setItem("darkMode", false);
     });
 
     document.querySelector(".bi-moon-fill").addEventListener("click", () => {
         document.querySelector("#toggle-ball").style.animationName = "toggle-ball-right";
-    });
-
-    document.querySelectorAll(".copy").forEach(t => {
-        new bootstrap.Tooltip(t);
+        document.body.classList.add("darkmode");
+        localStorage.setItem("darkMode", true);
     });
 
     document.querySelector("#mail").addEventListener("click", () => {
@@ -43,11 +48,6 @@ document.addEventListener("DOMContentLoaded", () => {
         textArea.remove();
 
         // clipBoard returns true if the copy command was executed
-        if (clipBoard) {
-            document.querySelector("#mail").dataset.tooltip = "Copied!";
-        }
-        else {
-            document.querySelector("#mail").dataset.tooltip = "Unable to Copy";
-        }
+        document.querySelector("#mail").dataset.tooltip = clipBoard ? "Copied" : "Unable to Copy";
     });
 });
