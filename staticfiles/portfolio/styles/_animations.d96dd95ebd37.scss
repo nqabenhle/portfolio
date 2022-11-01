@@ -1,0 +1,262 @@
+// || TOGGLE DARK/LIGHT MODE
+@-o-keyframes toggle-ball-right {
+  from {
+    left: 10px;
+  }
+
+  to {
+    left: 50px;
+  }
+}
+
+@-moz-keyframes toggle-ball-right {
+  from {
+    left: 10px;
+  }
+
+  to {
+    left: 50px;
+  }
+}
+
+@-webkit-keyframes toggle-ball-right {
+  from {
+    left: 10px;
+  }
+
+  to {
+    left: 50px;
+  }
+}
+
+@keyframes toggle-ball-right {
+  from {
+    left: 10px;
+  }
+
+  to {
+    left: 50px;
+  }
+}
+
+@-o-keyframes toggle-ball-left {
+  from {
+    left: 50px;
+  }
+
+  to {
+    left: 10px;
+  }
+}
+
+@-moz-keyframes toggle-ball-left {
+  from {
+    left: 50px;
+  }
+
+  to {
+    left: 10px;
+  }
+}
+
+@-webkit-keyframes toggle-ball-left {
+  from {
+    left: 50px;
+  }
+
+  to {
+    left: 10px;
+  }
+}
+
+@keyframes toggle-ball-left {
+  from {
+    left: 50px;
+  }
+
+  to {
+    left: 10px;
+  }
+}
+
+// || OFF-CANVAS
+@-o-keyframes menubar {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes menubar {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes menubar {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes menubar {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+// || SKELETON LOADING
+@keyframes skeleton-loading {
+  0% {
+    background-color: rgb(163, 184, 194);
+  }
+
+  100% {
+    background-color: rgb(240, 243, 245);
+  }
+}
+
+/* Opera */
+@-o-keyframes skeleton-loading {
+  0% {
+    background-color: rgb(163, 184, 194);
+  }
+
+  100% {
+    background-color: rgb(240, 243, 245);
+  }
+}
+
+/* Firefox */
+@-moz-keyframes skeleton-loading {
+  0% {
+    background-color: rgb(163, 184, 194);
+  }
+
+  100% {
+    background-color: rgb(240, 243, 245);
+  }
+}
+
+/* Chrome, Safari */
+@-webkit-keyframes skeleton-loading {
+  0% {
+    background-color: rgb(163, 184, 194);
+  }
+
+  100% {
+    background-color: rgb(240, 243, 245);
+  }
+}
+
+// || BUTTON HOVER ANIMATION
+@-o-keyframes ani {
+  from {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+  }
+
+  to {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+}
+
+@-moz-keyframes ani {
+  from {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+  }
+
+  to {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+}
+
+@-webkit-keyframes ani {
+  from {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+  }
+
+  to {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+}
+
+@keyframes ani {
+  from {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+  }
+
+  to {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+}
+
+@-o-keyframes ani2 {
+  from {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+
+  to {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+  }
+}
+
+@-moz-keyframes ani2 {
+  from {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+
+  to {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+  }
+}
+
+@-webkit-keyframes ani2 {
+  from {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+
+  to {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+  }
+}
+
+@keyframes ani2 {
+  from {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+
+  to {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+  }
+}

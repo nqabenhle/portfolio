@@ -1,6 +1,7 @@
 import json
 from django.shortcuts import render
 from django.http import HttpResponse, JsonResponse
+from django.core.mail import send_mail
 from django import forms
 
 from .models import *
@@ -45,13 +46,27 @@ def skills(request):
     })
 
 class HireForm(forms.Form):
-    name = forms.CharField(widget=forms.TextInput(attrs={"class":"form-control", "placeholder":"Full Names"}))
+    name = forms.CharField(widget=forms.TextInput(attrs={"class":"form-control", "placeholder":"Full Name"}))
     email = forms.CharField(widget=forms.TextInput(attrs={"class":"form-control", "placeholder":"Email"}))
     offer = forms.CharField(widget=forms.TextInput(attrs={"class":"form-control", "placeholder":"Job Offer"}))
     message = forms.CharField(widget=forms.Textarea(attrs={"class":"form-control", "placeholder":"Job Description"}))
     
 
 def hire(request):
-    return render(request, "portfolio/hire.html", {
-        "form": HireForm()
-    })
+    if request.method == "POST":
+        data = json.loads(request.body)
+        
+        send_mail(
+            "Job Offer",
+            f"Hey Nqabenhle,\n{data.get('name')} sent you a job offer.\nJob Offer: {data.get('job_offer')}\nMessage: {data.get('message')}\nEmail: {data.get('email')}",
+            "portfolio@livingdreams.com",
+            ['nqabenhlemlaba22@gmail.com'],
+            fail_silently=False,
+        )
+
+        return JsonResponse({"message": "success"}, status=200)
+
+    else:
+        return render(request, "portfolio/hire.html", {
+            "form": HireForm()
+        })

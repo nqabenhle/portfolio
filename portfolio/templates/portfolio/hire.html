@@ -1,4 +1,5 @@
 {% extends "portfolio/layout.html" %}
+{% load static %}
 
 {% block title %} Hire Me {% endblock %}
 
@@ -6,25 +7,28 @@
 <a href="{% url 'portfolio:hire' %}" class="active">Hire Me</a>
 {% endblock %}
 
+{% block script %} {% static 'portfolio/hire.js' %} {% endblock %}
+
 {% block body %}
 
 <section id="hire-page">
     <div class="container">
         <p class="header">Hire Me</p>
         <div class="row">
-            <div class="col-sm-12-col-md-4 col-lg-4 view-hidden-left">
+            <div class="col-sm-12-col-md-4 col-lg-4 view-hidden-left d-none d-lg-block">
                 <img class="skeleton" src="https://ik.imagekit.io/2ajtfwyor/tr:w-750/Portfolio/IMG-20220526-WA0043_qeZNL0LFj-.jpg" alt="Nqabenhle working" loading="lazy">
             </div>
             <div class="col-sm-12-col-md-8 col-lg-8">
                 <div>
-                    <form action="">
+                    <form>
+                        <div id="alert-placeholder"></div>
                         {% csrf_token %}
                         {% for field in form %}
                             <div class="mb-3">
                                 {{ field }}
                             </div>
                         {% endfor %}
-                        <div class="button-container text-center">
+                        <div class="button-container text-center" id="submit">
                             <span class="mas">Send</span>
                             <button type="button" name="Hover">Send</button>
                         </div>
@@ -34,5 +38,4 @@
         </div>
     </div>
 </section>
-
 {% endblock %}

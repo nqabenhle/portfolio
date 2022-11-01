@@ -1,0 +1,181 @@
+// || UNDERLINE
+.underline {
+  text-decoration: underline;
+}
+
+// || CUSTOM TOOLTIP
+
+.c-tooltip {
+  position: relative;
+
+  &::before,
+  &::after {
+    position: absolute;
+    top: -.25rem;
+    left: 50%;
+    transform: translateX(-50%) translateY(-100%) scale(0);
+    transition: 50ms transform;
+    transform-origin: bottom center;
+  }
+
+  &:before {
+    content: attr(data-tooltip);
+    padding: .5rem;
+    width: max-content;
+    border-radius: .3rem;
+    text-align: center;
+    background-color: #000;
+    color: #fff;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:hover::before,
+  &:hover::after {
+    transform: translateX(-50%) translateY(-100%) scale(1);
+  }
+}
+
+// || SKELETON LOADING
+.skeleton {
+  width: 100%;
+  aspect-ratio: 1/1;
+  animation: skeleton-loading 1s linear infinite alternate;
+}
+
+// || TEXT CAROUSEL
+@mixin white-gradient {
+  background: linear-gradient(to right, var(--secondary-color) 0%, rgba(249, 235, 200, 0) 100%);
+}
+
+$animationSpeed: 40s;
+
+// Animation
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(calc(-100px * 7))
+  }
+}
+
+
+// Styling
+.slider {
+  padding: 10px 0;
+  border-radius: calc(#{$border-radius} - 10px);
+  background-color: var(--secondary-color);
+  // box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
+  height: 100%;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+
+  &::before,
+  &::after {
+    @include white-gradient;
+    content: "";
+    height: 100%;
+    position: absolute;
+    width: 50px;
+    z-index: 2;
+  }
+
+  &::after {
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
+  }
+
+  &::before {
+    left: 0;
+    top: 0;
+  }
+
+  .slide-track {
+    animation: scroll $animationSpeed linear infinite;
+    display: flex;
+    width: calc(100px * 11);
+  }
+
+  .slide {
+    width: 100px;
+  }
+}
+
+// || BUTTON HOVER
+@mixin button($bcolor,
+  $url,
+  $x1,
+  $y1,
+  $bor,
+  $col) {
+  background: $bcolor;
+  -webkit-mask: url($url);
+  mask: url($url);
+  -webkit-mask-size: $x1 $y1;
+  mask-size: $x1 $y1;
+  border: $bor;
+  color: $col;
+}
+
+.button-container {
+  position: relative;
+  width: 100px;
+  height: 50px;
+  overflow: hidden;
+  border: 1px solid var(--secondary-color);
+  transition: 0.5s;
+  border-radius: $border-radius;
+
+  button {
+    width: 101%;
+    height: 100%;
+
+    @include button(var(--secondary-color),
+      "https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png",
+      2300%,
+      100%,
+      none,
+      var(--text-dark-color));
+    cursor: pointer;
+    -o-animation: ani2 0.7s steps(22) forwards;
+    -moz-animation: ani2 0.7s steps(22) forwards;
+    -webkit-animation: ani2 0.7s steps(22) forwards;
+    animation: ani2 0.7s steps(22) forwards;
+
+    &:hover {
+      -o-animation: ani 0.7s steps(22) forwards;
+      -moz-animation: ani 0.7s steps(22) forwards;
+      -webkit-animation: ani 0.7s steps(22) forwards;
+      animation: ani 0.7s steps(22) forwards;
+    }
+  }
+}
+
+.mas {
+  position: absolute;
+  color: var(--text-dark-color);
+  text-align: center;
+  width: 101%;
+  position: absolute;
+  margin-top: 13px;
+  overflow: hidden;
+}
+
+// ALIGN MIDDLE
+.align-middle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// NO MARGIN  
+.no-margin {
+  margin: 0 !important;
+}

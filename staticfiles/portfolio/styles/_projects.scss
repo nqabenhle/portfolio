@@ -1,0 +1,19 @@
+#projects {
+  padding-bottom: calc(#{$padding} - 16px);
+
+  .card {
+    margin-bottom: 16px;
+    height: 100;
+
+    .stack-header {
+      font-weight: 700;
+      margin: 16px 0 6px 0;
+    }
+  
+    .stack {
+      background-color: var(--primary-dark-color);
+      border-radius: $border-radius;
+      height: 5px;
+    }
+  }
+}

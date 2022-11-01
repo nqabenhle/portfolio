@@ -1,0 +1,7 @@
+#blogs {
+  padding-bottom: calc(#{$section-padding} - 16px);
+
+  .card {
+    margin-bottom: 16px;
+  }
+}
