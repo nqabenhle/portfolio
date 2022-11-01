@@ -130,7 +130,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Email configuration
 EMAIL_HOST = os.environ['HOST']
-EMAIL_PORT = os.environ['PORT']
+EMAIL_PORT = os.environ['EMAIL_PORT']
 EMAIL_HOST_USER = os.environ['USER']
 EMAIL_HOST_PASSWORD = os.environ['PASSWORD']
 EMAIL_USE_TLS = True
