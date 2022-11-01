@@ -1,1 +1,1 @@
-web: gunicorn project_portia.wsgi --log-file -
+web: gunicorn qcodes.wsgi --log-file -
