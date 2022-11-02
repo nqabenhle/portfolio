@@ -136,4 +136,4 @@ EMAIL_HOST_PASSWORD = os.environ['PASSWORD']
 EMAIL_USE_TLS = True
 
 # Csrf settings
-CSRF_TRUSTED_ORIGINS = ['https://web-production-8c7d.up.railway.app', 'https://portiaaniqboutique.co.za', 'https://www.portiaaniqboutique.co.za']
+CSRF_TRUSTED_ORIGINS = ['https://portfolio-production-34d5.up.railway.app', 'https://qcodes.site', 'https://www.qcodes.site']
