@@ -55,6 +55,7 @@ header {
   }
 
   #menu-links {
+    @include label-large;
     display: none;
     text-transform: uppercase;
     color: #212529;
@@ -94,7 +95,7 @@ header {
 }
 
 #off-canvas {
-  @include body-small;
+  @include body-medium;
   text-transform: uppercase;
   text-align: center;
   background-color: var(--tertiary-color);

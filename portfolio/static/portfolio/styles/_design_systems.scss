@@ -25,12 +25,12 @@
   --tertiary-color: #51C4D3;
 
   // Text colors
-  --text-dark-color: #FAFAFA;
+  --text-dark-color: #f1e5e5;
   --text-light-color: #212529;
 }
 
 // TEXT STYLES
-$font-family: "Glory", sans-serif;
+$font-family: "Kalam", sans-serif;
 
 // DISPLAY TEXT STYLES
 @mixin display-large {
@@ -76,20 +76,20 @@ $font-family: "Glory", sans-serif;
 // TITLE TEXT STYLES
 @mixin title-large {
   line-height: 28px;
-  font-size: 22px;
+  font-size: 25px;
   font-family: $font-family;
 }
 
 @mixin title-medium {
   line-height: 24px;
-  font-size: 16px;
+  font-size: 19px;
   font-weight: 500;
   font-family: $font-family;
 }
 
 @mixin title-small {
   line-height: 20px;
-  font-size: 16px;
+  font-size: 19px;
   font-weight: 500;
   font-family: $font-family;
 }
@@ -117,19 +117,19 @@ $font-family: "Glory", sans-serif;
 // BODY TEXT STYLES
 @mixin body-large {
   line-height: 24px;
-  font-size: 16px;
+  font-size: 19px;
   font-family: $font-family;
 }
 
 @mixin body-medium {
   line-height: 20px;
-  font-size: 14px;
+  font-size: 17px;
   font-family: $font-family;
 }
 
 @mixin body-small {
   line-height: 16px;
-  font-size: 12px;
+  font-size: 15px;
   font-family: $font-family;
 }
 

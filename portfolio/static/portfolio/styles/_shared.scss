@@ -4,6 +4,7 @@
 
 body {
   margin: 0;
+  width: 100%;
 }
 
 main {
@@ -106,7 +107,8 @@ img {
 .view-hidden-right {
   opacity: 0;
   filter: blur(5px);
-  transform: translateX(100%);
+  transform: translateX(-100%);
+  overflow: hidden;
   transition: all 1s;
 }
 
