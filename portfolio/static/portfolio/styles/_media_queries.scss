@@ -40,6 +40,10 @@
   .button-container {
     @include label-medium;
   }
+
+  .slider {
+    @include body-medium;
+  }
 }
 
 @media only screen and (min-width: 992px) {
@@ -53,6 +57,10 @@
 
   .button-container {
     @include label-large;
+  }
+
+  .slider {
+    @include body-large;
   }
 }
 

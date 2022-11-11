@@ -65,6 +65,7 @@ $animationSpeed: 40s;
 
 // Styling
 .slider {
+  @include body-small;
   padding: 10px 0;
   border-radius: calc(#{$border-radius} - 10px);
   background-color: var(--secondary-color);
