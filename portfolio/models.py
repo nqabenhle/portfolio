@@ -23,7 +23,7 @@ class Blog(models.Model):
 
 class Certificate(models.Model):
     name = models.CharField(max_length=100)
-    picture_link = models.CharField(max_length=200)
+    picture_link = models.CharField(max_length=500)
     validation = models.CharField(max_length=200)
 
     def __str__(self):
