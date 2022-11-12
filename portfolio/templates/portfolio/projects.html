@@ -65,8 +65,10 @@
                             <div class="content text-start languages">
                                 <div class="stack-header">Languages used:</div>
                                 {% for language, percentage in project.languages.items %}
-                                    <div>{{ language }}:</div> 
-                                    <div class="stack" data-percentage="{{ percentage }}"></div>
+                                    <div class="mb-3">
+                                        <div class="mb-2">{{ language }}:</div> 
+                                        <div class="stack" data-percentage="{{ percentage }}"></div>
+                                    </div>
                                 {% endfor %}
                             </div>
                             <div class="text-end">
