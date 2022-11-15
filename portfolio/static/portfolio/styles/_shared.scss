@@ -33,6 +33,7 @@ section {
 }
 
 .learn-more {
+  @include label-small;
   color: var(--secondary-dark-color);
   text-decoration: underline;
 }

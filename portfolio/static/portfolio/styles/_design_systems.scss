@@ -97,19 +97,19 @@ $font-family: "Kalam", sans-serif;
 // LABEL TEXT STYLES
 @mixin label-large {
   line-height: 20px;
-  font-size: 14px;
+  font-size: 16px;
   font-family: $font-family;
 }
 
 @mixin label-medium {
   line-height: 16px;
-  font-size: 12px;
+  font-size: 14px;
   font-family: $font-family;
 }
 
 @mixin label-small {
   line-height: 16px;
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 500;
   font-family: $font-family;
 }
